@@ -18,7 +18,7 @@ public class OnlyOnesTest {
         arrayList.add(2);
         OnlyOnes on = new OnlyOnes();
         ArrayList result = on.noDuplicates(arrayList);
-        assertEquals(output,result);
+        assertEquals(result, output);
     }
     @Test
     public void testOnlyOnesByString() {
@@ -31,6 +31,12 @@ public class OnlyOnesTest {
         arrayList.add("two");
         OnlyOnes on = new OnlyOnes();
         ArrayList result = on.noDuplicates(arrayList);
-        assertEquals(output,result);
+        assertEquals(result, output);
+    }
+    @Test
+    public void testOnlyOnesNoNull() {
+        OnlyOnes on = new OnlyOnes();
+        ArrayList result = on.noDuplicates(null);
+        assertEquals(result, new ArrayList());
     }
 }

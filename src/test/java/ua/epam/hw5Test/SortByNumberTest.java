@@ -28,4 +28,11 @@ public class SortByNumberTest {
         LinkedList result = sbn.linkedListPartitionByNumber(linkedList,x);
         assertEquals(result,sortedByNumberList);
     }
+    @Test
+    public void testSortByNumberNoNull() {
+        int x = 3;
+        SortByNumber sbn = new SortByNumber();
+        LinkedList result = sbn.linkedListPartitionByNumber(null,x);
+        assertEquals(result,new LinkedList());
+    }
 }

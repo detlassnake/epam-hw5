@@ -46,4 +46,11 @@ public class RotateListTest {
         LinkedList result = rl.linkedListRotate(linkedList, k);
         assertEquals(result, rotatedLinkedList);
     }
+    @Test
+    public void testRotateListNoNull() {
+        int k = 2;
+        RotateList rl = new RotateList();
+        LinkedList result = rl.linkedListRotate(null, k);
+        assertEquals(result, new LinkedList());
+    }
 }

@@ -13,6 +13,9 @@ public class RotateList<T> {
     static final String ROTATED_LIST_TEXT = "Rotated List :";
 
     public LinkedList linkedListRotate(LinkedList<T> linkedList, int k) {
+        if (linkedList == null) {
+            return new LinkedList();
+        }
         System.out.println(ORIGINAL_LIST_TEXT + linkedList);
         Collections.rotate(linkedList, k);
         System.out.println(ROTATED_LIST_TEXT + linkedList);

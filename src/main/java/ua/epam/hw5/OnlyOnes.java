@@ -18,6 +18,9 @@ public class OnlyOnes {
     static final String LIST_SIZE_TEXT = "List size: ";
 
     public ArrayList noDuplicates(ArrayList arrayList) {
+        if (arrayList == null) {
+            return new ArrayList();
+        }
         Collections.sort(arrayList);
         System.out.println(ORIGINAL_LIST_TEXT + arrayList);
         arrayList = new ArrayList<Integer>(new HashSet<Integer>(arrayList));

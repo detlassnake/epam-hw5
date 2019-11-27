@@ -17,6 +17,9 @@ public class SortByNumber {
     static final String SEMICOLON_TEXT = ": ";
 
     public LinkedList linkedListPartitionByNumber(LinkedList linkedList, int x) {
+        if (linkedList == null) {
+            return new LinkedList();
+        }
         System.out.println(ORIGINAL_LIST_TEXT + linkedList);
         Collections.sort(linkedList);
         System.out.println(SORTED_LIST_TEXT + x + SEMICOLON_TEXT + linkedList);

@@ -13,6 +13,9 @@ public class BalancedTree<T> {
     static final String TREE_TEXT = "Tree: ";
 
     public TreeSet balancedBinaryTree(ArrayList<T> arrayList) {
+        if (arrayList == null) {
+            return new TreeSet();
+        }
         System.out.println(ORIGINAL_LIST_TEXT + arrayList);
         TreeSet<T> treeSet = new TreeSet<T>(arrayList);//TreeSet is basically implementation of a self-balancing binary search tree like Red-Black Tree.
         System.out.println(TREE_TEXT + treeSet);

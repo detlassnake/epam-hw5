@@ -34,4 +34,10 @@ public class BalancedTreeTest {
         TreeSet result = bt.balancedBinaryTree(arrayList);
         assertEquals(result,treeSet);
     }
+    @Test
+    public void tesTBalancedTreeNoNull() {
+        BalancedTree bt = new BalancedTree();
+        TreeSet result = bt.balancedBinaryTree(null);
+        assertEquals(result,new TreeSet());
+    }
 }
